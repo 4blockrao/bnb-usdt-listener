@@ -1,1 +1,13 @@
-package.json
+{
+  "name": "bnb-usdt-listener",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "node-fetch": "^3.3.2"
+  }
+}
