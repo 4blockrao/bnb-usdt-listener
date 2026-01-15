@@ -4,7 +4,7 @@ const SUPABASE_FUNCTION_URL =
   process.env.SUPABASE_URL + "/functions/v1/internal_confirm_payment";
 
 const REQUIRED_CONFIRMATIONS = Number(process.env.CONFIRMATIONS_REQUIRED || 3);
-
+console.log("Confirmations required:", REQUIRED_CONFIRMATIONS);
 usdt.on("Transfer", async (from, to, value, event) => {
   try {
     const amount = formatUnits(value, 18);
