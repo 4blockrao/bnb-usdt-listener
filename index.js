@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 const SUPABASE_FUNCTION_URL =
   process.env.SUPABASE_URL + "/functions/v1/internal_confirm_payment";
 
-const REQUIRED_CONFIRMATIONS = CONFIRMATIONS_REQUIRED;
+const REQUIRED_CONFIRMATIONS = Number(process.env.CONFIRMATIONS_REQUIRED || 3);
 
 usdt.on("Transfer", async (from, to, value, event) => {
   try {
